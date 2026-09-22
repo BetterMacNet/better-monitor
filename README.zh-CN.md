@@ -2,7 +2,7 @@
 
 [English](README.md) · 简体中文
 
-![Better Monitor](assets/logo.png)
+<img src="assets/logo.png" alt="Better Monitor" width="160">
 
 一款专注于 macOS 的系统监控工具，帮助你快速了解 Mac 当前正在做什么。
 
@@ -51,13 +51,14 @@ brew install --cask bettermacnet/tap/better-monitor
 - [用户规则](RULES.md)
 - [BetterMac 官网](https://bettermac.net/)
 
-## 品牌素材
+## License
 
-![Better Monitor Logo](assets/logo.png)
+Better Monitor 及本仓库中的原创材料均为专有内容，并非开源软件。版权所有。未经 BetterMacNet 事先书面许可，不授予复制、修改、分发或使用这些内容的任何许可。
 
 ## 支持
 
-- [支持中心](https://bettermac.net/en/support/)
+- [支持中心](https://bettermac.net/en/support/?product=better-monitor)
+- [联系我们](https://bettermac.net/en/contact/?product=better-monitor)
 - [使用条款](https://bettermac.net/en/terms/)
 - [隐私政策](https://bettermac.net/en/privacy/)
 

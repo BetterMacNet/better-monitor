@@ -2,7 +2,7 @@
 
 English · [简体中文](README.zh-CN.md)
 
-![Better Monitor](assets/logo.png)
+<img src="assets/logo.png" alt="Better Monitor" width="160">
 
 A focused macOS system monitor for understanding what your Mac is doing right now.
 
@@ -45,15 +45,15 @@ Some information depends on macOS privacy permissions:
 
 ## Documentation
 
-- [Features](docs/features.md)
-- [Usage guide](docs/usage.md)
-- [Release notes](docs/release-notes.md)
+- [Features](docs/features.en.md)
+- [Usage guide](docs/usage.en.md)
+- [Release notes](docs/release-notes.en.md)
 - [User rules](RULES.md)
 - [Website](https://bettermac.net/)
 
-## Brand asset
+## License
 
-![Better Monitor logo](assets/logo.png)
+Better Monitor and the original materials in this repository are proprietary and not open source. All rights reserved. No license is granted to copy, modify, distribute, or use them without prior written permission from BetterMacNet.
 
 ## Support
 

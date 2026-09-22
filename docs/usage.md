@@ -1,19 +1,18 @@
 # Better Monitor 使用说明
 
-> English usage documentation will be added when the public release documentation is localized. The bilingual landing page is available in the root [README](../README.md).
-
 ## 安装与启动
 
-Better Monitor 目前尚未公开发布。首个签名版本发布后，本节会补充下载链接和安装步骤。
+Better Monitor 1.0.0 已通过 Developer ID 签名和 Apple 公证，并已发布到 Homebrew Cask。
 
-发布后，安装方式将包括直接下载签名应用；如果对应的 Homebrew Cask 已发布，也可以使用 Homebrew：
+使用 Homebrew 安装：
 
-   ```bash
-   brew install --cask better-monitor
-   ```
+```bash
+brew install --cask bettermacnet/tap/better-monitor
+```
 
-2. 将 `Better Monitor.app` 放入「应用程序」文件夹并启动。
-3. 首次启动后，从左侧导航选择需要查看的页面。
+也可以从[最新发布](https://github.com/BetterMacNet/better-monitor/releases/latest)下载磁盘映像，将 `Better Monitor.app` 拖入「应用程序」文件夹后启动。首次启动无需联网验证公证票据。
+
+首次启动后，从左侧导航选择需要查看的页面。
 
 ## 从哪里开始
 

@@ -1,8 +1,6 @@
 # Better Monitor 功能介绍
 
-> English feature documentation will be added when the public release documentation is localized. The bilingual landing page is available in the root [README](../README.md).
-
-Better Monitor 是一款面向 macOS 的原生系统监控工具。它把日常观察和问题排查需要的信息放在同一个窗口里，不要求你在多个系统工具之间来回切换。
+Better Monitor 1.0.0 已公开发布。这是一款面向 macOS 的原生系统监控工具，把日常观察和问题排查需要的信息放在同一个窗口里，不要求你在多个系统工具之间来回切换。
 
 ## 监控概览
 
