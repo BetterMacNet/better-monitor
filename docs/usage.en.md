@@ -70,8 +70,8 @@ AI assistance is optional:
 3. Read and confirm the data-disclosure notice.
 4. Request a diagnostic summary from process details.
 
-A request may include process, network, and file-activity summaries needed for diagnosis. Confirm that the provider and its data handling meet your requirements before enabling the feature.
+A request may include process, network, path, and file-activity summaries needed for diagnosis. Confirm that the provider and its data handling meet your requirements before enabling the feature.
 
 ## Privacy and data
 
-Better Monitor keeps monitoring data on your Mac by default. Network access for AI diagnostics occurs only after you configure a provider and request a summary. See the [Privacy Policy](https://bettermac.net/en/privacy/) for more information.
+Better Monitor keeps monitoring data on your Mac by default. Local AI conversations and monitoring history can be cleared in the app, but clearing them does not remove data already sent to the provider. Network access for AI diagnostics occurs only after you configure a provider and request a summary; the provider's own retention and model-training terms apply to data sent for diagnosis. See the [Privacy Policy](https://bettermac.net/en/privacy/) for more information.

@@ -58,7 +58,7 @@ The impact shown is based on current observations; it is not a measurement of bo
 
 ## Local history and privacy
 
-Monitoring history is stored locally by default. Core monitoring does not require an account or cloud service. Data is sent to an external AI provider only when you configure one and explicitly request a diagnostic summary.
+Monitoring history is stored locally by default. Core monitoring does not require an account or cloud service. An AI diagnostic uses network access only when you configure a provider and explicitly request a summary; the request may include process, network, path, and file-activity summaries needed for diagnosis.
 
 ## Optional AI assistance
 
@@ -66,4 +66,6 @@ AI is not required to use Better Monitor. When enabled, you can configure your o
 
 - API keys are stored in the macOS Keychain
 - A data-disclosure notice is shown before sending diagnostic information
+- Local AI conversations and monitoring history can be cleared in the app; clearing them does not remove data already sent to the provider
+- The provider's own retention and model-training terms apply to data sent for diagnosis
 - AI output is diagnostic assistance, not a substitute for your judgment

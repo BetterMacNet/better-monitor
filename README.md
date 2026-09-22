@@ -4,62 +4,86 @@ English · [简体中文](README.zh-CN.md)
 
 <img src="assets/logo.png" alt="Better Monitor" width="160">
 
-A focused macOS system monitor for understanding what your Mac is doing right now.
+A native macOS system monitor for understanding what your Mac is doing right now.
 
-Better Monitor brings process, network, port, and startup-item information into one native macOS app, with a clear overview for everyday diagnosis and a detailed view when you need to investigate further.
+Better Monitor brings process, network, port, startup-item, and hardware information into one app for everyday observation and focused troubleshooting.
+
+## When to use Better Monitor
+
+- Check overall CPU, memory, disk, network, battery, sensor, and process status.
+- Find an app or process using unusually high CPU or memory.
+- Inspect active network connections, traffic, protocols, and destinations.
+- Review listening ports, their owning processes, and risk signals.
+- Review background startup items and their current resource impact.
+
+## Quick start
+
+1. Install Better Monitor:
+
+   ```bash
+   brew install --cask bettermacnet/tap/better-monitor
+   ```
+
+2. Launch Better Monitor and choose a page from the navigation sidebar.
+3. Open **Monitoring overview** for a quick status check, or use the process, network, ports, and startup-item pages to investigate a specific issue.
+4. Grant Location Services only if you want the current Wi-Fi name. macOS may still limit process and port details depending on permissions and system visibility.
+
+You can also download the [latest release](https://github.com/BetterMacNet/better-monitor/releases/latest) and move `Better Monitor.app` to the Applications folder. Releases are signed with a Developer ID certificate and notarized by Apple; the notarization ticket is stapled to the disk image.
 
 ## Highlights
 
-- **Monitoring overview** — See the health of CPU, memory, disk, network, battery, sensors, and running processes at a glance.
-- **Process monitor** — Inspect resource usage and process details, with actions for processes you control.
-- **Network activity** — Review active connections, traffic, interfaces, protocols, and destinations.
+- **Monitoring overview** — See system health and key resource information at a glance.
+- **Process monitor** — Inspect resource usage, identity, paths, network activity, and open files, with actions for processes you control.
+- **Network activity** — Review interfaces, connections, traffic, protocols, TCP states, and destinations.
 - **Ports and services** — Find listening ports, identify their owning processes, and surface useful risk signals.
-- **Startup items** — Review startup entries, current resource impact, and the items that can be managed from the app.
-- **Optional AI assistance** — Configure your own provider and use AI-powered process diagnostics when enabled.
-- **Native macOS experience** — Built for macOS 15 or later, with a native SwiftUI interface.
+- **Startup items** — Review readable LaunchAgents and LaunchDaemons, current resource impact, and modern login items through System Settings.
+- **Optional AI assistance** — Configure your own provider and request an AI-assisted process diagnostic when you need it.
+- **Native macOS experience** — Built with SwiftUI for macOS 15 or later.
+
+See the [features](docs/features.en.md) and [usage guide](docs/usage.en.md) for details.
+
+## Permissions and known limits
+
+- Location Services is needed to show the current Wi-Fi network name. Better Monitor does not use this permission for location services.
+- macOS may limit process and port details when the system does not expose them to the app.
+- Modern login items managed by macOS are reviewed through System Settings rather than fully managed in the app.
+- A non-local port bind is a signal to investigate, not proof of external reachability or a completed security audit.
+- Startup-item impact reflects current runtime observations; it is not a measurement of boot time or a guaranteed saving after disabling an item.
+
+## Privacy and optional AI
+
+Core monitoring is local by default and does not require an account or cloud service. AI assistance is optional:
+
+- Network access for an AI diagnostic occurs only after you configure a provider and explicitly request a summary.
+- API keys are stored in the macOS Keychain.
+- A data-disclosure notice is shown before diagnostic information is sent.
+- A request may include process, network, path, and file-activity summaries needed for diagnosis. Review the provider's data handling before enabling the feature.
+- Local AI conversations and monitoring history can be cleared in the app; clearing them does not remove data already sent to the provider.
+- The provider's own retention and model-training terms apply to data sent for diagnosis.
+
+You can use the core monitoring features without configuring AI.
+
+## Documentation and support
+
+- [Features](docs/features.en.md)
+- [Usage guide](docs/usage.en.md)
+- [Release notes](docs/release-notes.en.md)
+- [User rules](RULES.md)
+- [Latest release](https://github.com/BetterMacNet/better-monitor/releases/latest)
+- [Report a bug](https://github.com/BetterMacNet/better-monitor/issues/new?template=bug_report.md)
+- [Request a feature](https://github.com/BetterMacNet/better-monitor/issues/new?template=feature_request.md)
+- [Security reporting](SECURITY.md)
+- [Support center](https://bettermac.net/en/support/?product=better-monitor)
+- [Contact us](https://bettermac.net/en/contact/?product=better-monitor)
+- [Website](https://bettermac.net/)
+- [Privacy Policy](https://bettermac.net/en/privacy/)
+- [Terms of Use](https://bettermac.net/en/terms/)
 
 ## Requirements
 
 - macOS 15.0 (Sequoia) or later
 - Universal binary — Apple silicon and Intel
 
-## Install
-
-With [Homebrew](https://brew.sh):
-
-```bash
-brew install --cask bettermacnet/tap/better-monitor
-```
-
-Or download the disk image from the [latest release](https://github.com/BetterMacNet/better-monitor/releases/latest).
-
-Every release is signed with a Developer ID certificate and notarized by Apple. The notarization ticket is stapled to the disk image, so the first launch works without a network connection.
-
-## Permissions
-
-Some information depends on macOS privacy permissions:
-
-- Location permission is needed to show the current Wi-Fi network name on the Network Activity page.
-- Process and port details may be limited by macOS when the system does not expose them to the app.
-- Better Monitor does not need your location for location services; macOS requires this permission to provide the Wi-Fi name.
-
-## Documentation
-
-- [Features](docs/features.en.md)
-- [Usage guide](docs/usage.en.md)
-- [Release notes](docs/release-notes.en.md)
-- [User rules](RULES.md)
-- [Website](https://bettermac.net/)
-
 ## License
 
 Better Monitor and the original materials in this repository are proprietary and not open source. All rights reserved. No license is granted to copy, modify, distribute, or use them without prior written permission from BetterMacNet.
-
-## Support
-
-- [Support center](https://bettermac.net/en/support/?product=better-monitor)
-- [Contact us](https://bettermac.net/en/contact/?product=better-monitor)
-- [Terms of Use](https://bettermac.net/en/terms/)
-- [Privacy Policy](https://bettermac.net/en/privacy/)
-
----
