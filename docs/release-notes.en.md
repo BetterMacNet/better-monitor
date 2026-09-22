@@ -16,4 +16,4 @@ Legal and support:
 - [Terms of Use](https://bettermac.net/en/terms/)
 - [Support Center](https://bettermac.net/en/support/?product=better-monitor)
 
-> The public repository contains product information, user documentation, screenshots, and release materials. The application source code remains private.
+> The public repository contains product information, user documentation, and release materials. The application source code remains private.

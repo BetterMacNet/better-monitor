@@ -51,7 +51,7 @@ brew install --cask bettermacnet/tap/better-monitor
 - [用户规则](RULES.md)
 - [BetterMac 官网](https://bettermac.net/)
 
-## License
+## 许可说明
 
 Better Monitor 及本仓库中的原创材料均为专有内容，并非开源软件。版权所有。未经 BetterMacNet 事先书面许可，不授予复制、修改、分发或使用这些内容的任何许可。
 

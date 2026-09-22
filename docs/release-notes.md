@@ -16,4 +16,4 @@ Better Monitor 首个签名、公证版本通过 Homebrew Cask 发布。
 - [使用条款](https://bettermac.net/en/terms/)
 - [支持中心](https://bettermac.net/en/support/?product=better-monitor)
 
-> 公开仓库只存放产品介绍、使用文档、截图和发布资料；应用源代码保持私有。
+> 公开仓库只存放产品介绍、使用文档和发布资料；应用源代码保持私有。
