@@ -57,7 +57,8 @@ Some information depends on macOS privacy permissions:
 
 ## Support
 
-- [Support center](https://bettermac.net/en/support/)
+- [Support center](https://bettermac.net/en/support/?product=better-monitor)
+- [Contact us](https://bettermac.net/en/contact/?product=better-monitor)
 - [Terms of Use](https://bettermac.net/en/terms/)
 - [Privacy Policy](https://bettermac.net/en/privacy/)
 
