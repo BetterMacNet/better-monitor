@@ -63,5 +63,3 @@ Better Monitor and the original materials in this repository are proprietary and
 - [Privacy Policy](https://bettermac.net/en/privacy/)
 
 ---
-
-This public repository contains product information, documentation, and release downloads. The application source code remains private.

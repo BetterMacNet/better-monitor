@@ -63,5 +63,3 @@ Better Monitor 及本仓库中的原创材料均为专有内容，并非开源�
 - [隐私政策](https://bettermac.net/en/privacy/)
 
 ---
-
-本公开仓库存放产品介绍、使用文档和发布下载；应用源代码保持私有。
