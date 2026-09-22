@@ -2,7 +2,7 @@
 
 ## Install and launch
 
-Better Monitor 1.0.0 is signed with a Developer ID certificate, notarized by Apple, and available through Homebrew Cask.
+Better Monitor 1.0.1 is signed with a Developer ID certificate, notarized by Apple, and available through Homebrew Cask.
 
 Install with Homebrew:
 

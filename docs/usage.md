@@ -2,7 +2,7 @@
 
 ## 安装与启动
 
-Better Monitor 1.0.0 已通过 Developer ID 签名和 Apple 公证，并已发布到 Homebrew Cask。
+Better Monitor 1.0.1 已通过 Developer ID 签名和 Apple 公证，并已发布到 Homebrew Cask。
 
 使用 Homebrew 安装：
 
