@@ -1,12 +1,14 @@
 # Better Monitor
 
-English · [简体中文](README.zh-CN.md)
+English · [简体中文](README.zh-CN.md) · [日本語](README.ja.md) · [한국어](README.ko.md)
 
 <img src="assets/logo.png" alt="Better Monitor" width="160">
 
 A native macOS system monitor for understanding what your Mac is doing right now.
 
 Better Monitor brings process, network, port, startup-item, and hardware information into one app for everyday observation and focused troubleshooting.
+
+![Better Monitor Monitoring Overview: health score, CPU, memory, network, disk, process, and thermal status, with suggestions](screenshots/en/01-overview.webp)
 
 ## When to use Better Monitor
 
@@ -25,7 +27,7 @@ Better Monitor brings process, network, port, startup-item, and hardware informa
    ```
 
 2. Launch Better Monitor and choose a page from the navigation sidebar.
-3. Open **Monitoring overview** for a quick status check, or use the process, network, ports, and startup-item pages to investigate a specific issue.
+3. Open **Monitoring Overview** for a quick status check, or use Process Monitor, Network, Ports & Services, and Login Items to investigate a specific issue.
 4. Grant Location Services only if you want the current Wi-Fi name. macOS may still limit process and port details depending on permissions and system visibility.
 
 You can also download the [latest release](https://github.com/BetterMacNet/better-monitor/releases/latest) and move `Better Monitor.app` to the Applications folder. Releases are signed with a Developer ID certificate and notarized by Apple; the notarization ticket is stapled to the disk image.
@@ -36,11 +38,24 @@ You can also download the [latest release](https://github.com/BetterMacNet/bette
 - **Process monitor** — Inspect resource usage, identity, paths, network activity, and open files, with actions for processes you control.
 - **Network activity** — Review interfaces, connections, traffic, protocols, TCP states, and destinations.
 - **Ports and services** — Find listening ports, identify their owning processes, and surface useful risk signals.
-- **Startup items** — Review readable LaunchAgents and LaunchDaemons, current resource impact, and modern login items through System Settings.
+- **Login Items** — Review readable LaunchAgents and LaunchDaemons, current resource impact, and modern login items through System Settings.
 - **Optional AI assistance** — Configure your own provider and request an AI-assisted process diagnostic when you need it.
 - **Native macOS experience** — Built with SwiftUI for macOS 15 or later.
 
-See the [features](docs/features.en.md) and [usage guide](docs/usage.en.md) for details.
+The [user guide](docs/usage.en.md) walks through every page with screenshots; [features](docs/features.en.md) has a short summary.
+
+## Screenshots
+
+| | |
+|---|---|
+| ![Process Monitor sorted by CPU with resource impact ratings](screenshots/en/02-processes.webp) | ![Process Details with signature, usage charts, and an AI Process Summary](screenshots/en/03-process-detail.webp) |
+| **Process Monitor** — sort by CPU, memory, or resource impact; list, aggregated, or tree view | **Process Details** — identity, signature, open files, and an optional AI summary |
+| ![Network Activity with throughput chart and connection list](screenshots/en/05-network-activity.webp) | ![Ports & Services with binding scope and risk levels](screenshots/en/06-ports.webp) |
+| **Network Activity** — live throughput and every connection with its process and TCP state | **Ports & Services** — who is listening, on which address, and which bindings deserve a look |
+| ![Login Items showing LaunchAgents with state, impact, and signature](screenshots/en/07-startup-items.webp) | ![Monitoring Overview in the light appearance](screenshots/en/13-overview-light.webp) |
+| **Login Items** — login items, LaunchAgents, and LaunchDaemons with current impact and signatures | **Light and dark** — follows the system or your choice, in four interface languages |
+
+Screenshots are generated with demo data; device names, paths, and addresses are fictional.
 
 ## Permissions and known limits
 
@@ -66,7 +81,7 @@ You can use the core monitoring features without configuring AI.
 ## Documentation and support
 
 - [Features](docs/features.en.md)
-- [Usage guide](docs/usage.en.md)
+- [User guide](docs/usage.en.md)
 - [Release notes](docs/release-notes.en.md)
 - [User rules](RULES.md)
 - [Latest release](https://github.com/BetterMacNet/better-monitor/releases/latest)

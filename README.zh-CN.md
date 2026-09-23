@@ -1,12 +1,14 @@
 # Better Monitor
 
-[English](README.md) · 简体中文
+[English](README.md) · 简体中文 · [日本語](README.ja.md) · [한국어](README.ko.md)
 
 <img src="assets/logo.png" alt="Better Monitor" width="160">
 
 一款原生 macOS 系统监控工具，帮助你了解 Mac 当前正在做什么。
 
 Better Monitor 将进程、网络、端口、启动项和硬件信息集中在一个应用中，适合日常观察和针对性排查。
+
+![Better Monitor 监控概览：健康评分、CPU、内存、网络、磁盘、进程与散热状态，以及系统建议](screenshots/zh-CN/01-overview.webp)
 
 ## 什么时候使用 Better Monitor
 
@@ -40,7 +42,20 @@ Better Monitor 将进程、网络、端口、启动项和硬件信息集中在�
 - **可选 AI 助手** — 配置你自己的服务商，在需要时主动请求 AI 辅助进程诊断。
 - **原生 macOS 体验** — 基于 SwiftUI 构建，支持 macOS 15 及更高版本。
 
-详情请查看[功能介绍](docs/features.md)和[使用说明](docs/usage.md)。
+[使用说明](docs/usage.md)配有截图，逐页介绍每个功能；[功能介绍](docs/features.md)是简短的概括。
+
+## 截图
+
+| | |
+|---|---|
+| ![进程监控：按 CPU 排序并标注资源影响](screenshots/zh-CN/02-processes.webp) | ![进程详情：签名、使用曲线与 AI 进程总结](screenshots/zh-CN/03-process-detail.webp) |
+| **进程监控** — 按 CPU、内存或资源影响排序，支持列表、聚合和进程树三种视图 | **进程详情** — 身份、签名、打开的文件，以及可选的 AI 总结 |
+| ![网络活动：吞吐量曲线与连接列表](screenshots/zh-CN/05-network-activity.webp) | ![端口与服务：绑定范围与风险等级](screenshots/zh-CN/06-ports.webp) |
+| **网络活动** — 实时吞吐量，以及每条连接所属的进程和 TCP 状态 | **端口与服务** — 谁在监听、监听在哪个地址、哪些绑定值得核对 |
+| ![启动项：LaunchAgents 的状态、影响与签名](screenshots/zh-CN/07-startup-items.webp) | ![浅色外观的监控概览](screenshots/zh-CN/13-overview-light.webp) |
+| **启动项** — 登录项、LaunchAgents 与 LaunchDaemons，附当前资源影响和签名状态 | **浅色与深色** — 跟随系统或手动选择，界面支持四种语言 |
+
+截图使用演示数据生成，其中的设备名、路径和地址均为虚构。
 
 ## 权限与能力边界
 

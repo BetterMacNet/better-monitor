@@ -1,6 +1,6 @@
 # Better Monitor Features
 
-Better Monitor 1.0.1 is a native macOS system monitor for everyday observation and focused troubleshooting. It brings the information you need into one window instead of sending you between multiple system tools.
+Better Monitor 1.0.2 is a native macOS system monitor for everyday observation and focused troubleshooting. It brings the information you need into one window instead of sending you between multiple system tools.
 
 ## Monitoring overview
 
