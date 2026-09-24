@@ -17,6 +17,7 @@ Better Monitor brings process, network, port, startup-item, and hardware informa
 - Inspect active network connections, traffic, protocols, and destinations.
 - Review listening ports, their owning processes, and risk signals.
 - Review background startup items and their current resource impact.
+- See whether a local model in Ollama, LM Studio, or MLX runs on the GPU or the Neural Engine, with memory bandwidth and tokens per second.
 
 ## Quick start
 
@@ -27,7 +28,7 @@ Better Monitor brings process, network, port, startup-item, and hardware informa
    ```
 
 2. Launch Better Monitor and choose a page from the navigation sidebar.
-3. Open **Monitoring Overview** for a quick status check, or use Process Monitor, Network, Ports & Services, and Login Items to investigate a specific issue.
+3. Open **Monitoring Overview** for a quick status check, **AI Monitor** to watch Apple silicon hardware and local AI runtimes, or use Process Monitor, Network, Ports & Services, and Login Items to investigate a specific issue.
 4. Grant Location Services only if you want the current Wi-Fi name. macOS may still limit process and port details depending on permissions and system visibility.
 
 You can also download the [latest release](https://github.com/BetterMacNet/better-monitor/releases/latest) and move `Better Monitor.app` to the Applications folder. Releases are signed with a Developer ID certificate and notarized by Apple; the notarization ticket is stapled to the disk image.
@@ -35,6 +36,7 @@ You can also download the [latest release](https://github.com/BetterMacNet/bette
 ## Highlights
 
 - **Monitoring overview** — See system health and key resource information at a glance.
+- **AI Monitor** — Watch Apple silicon in detail — CPU clusters, GPU, Neural Engine, Media Engine, memory bandwidth, power, and sensors — plus local AI runtimes such as Ollama, LM Studio, and MLX with their loaded model and tokens per second.
 - **Process monitor** — Inspect resource usage, identity, paths, network activity, and open files, with actions for processes you control.
 - **Network activity** — Review interfaces, connections, traffic, protocols, TCP states, and destinations.
 - **Ports and services** — Find listening ports, identify their owning processes, and surface useful risk signals.
@@ -45,6 +47,10 @@ You can also download the [latest release](https://github.com/BetterMacNet/bette
 The [user guide](docs/usage.en.md) walks through every page with screenshots; [features](docs/features.en.md) has a short summary.
 
 ## Screenshots
+
+![AI Monitor: AI workload, a local AI runtime with its loaded model and tokens per second, CPU clusters, GPU, Neural Engine, and memory bandwidth](screenshots/en/14-ai-monitor.webp)
+
+**AI Monitor** — see which engine a local model runs on and what limits it, from CPU clusters to memory bandwidth
 
 | | |
 |---|---|
@@ -98,7 +104,10 @@ You can use the core monitoring features without configuring AI.
 
 - macOS 15.0 (Sequoia) or later
 - Universal binary — Apple silicon and Intel
+- AI Monitor requires Apple silicon; on Intel Macs the other pages keep working.
 
 ## License
 
 Better Monitor and the original materials in this repository are proprietary and not open source. All rights reserved. No license is granted to copy, modify, distribute, or use them without prior written permission from BetterMacNet.
+
+AI Monitor includes code from [SiliconScope](https://github.com/kennss/SiliconScope), which in turn draws on [NeoAsitop](https://github.com/op06072/NeoAsitop) and [Stats](https://github.com/exelban/stats). All three are MIT licensed; their notices ship inside the app as `ThirdPartyNotices.txt`.

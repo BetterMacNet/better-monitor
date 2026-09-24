@@ -1,6 +1,6 @@
 # Better Monitor Features
 
-Better Monitor 1.0.2 is a native macOS system monitor for everyday observation and focused troubleshooting. It brings the information you need into one window instead of sending you between multiple system tools.
+Better Monitor 1.0.3 is a native macOS system monitor for everyday observation and focused troubleshooting. It brings the information you need into one window instead of sending you between multiple system tools.
 
 ## Monitoring overview
 
@@ -12,6 +12,16 @@ The overview page provides a quick view of:
 - Battery and sensor information
 - Running processes
 - System health and items that need attention
+
+## AI Monitor
+
+AI Monitor shows Apple silicon in detail, and where a local AI model runs (Apple silicon only):
+
+- A one-line AI workload verdict with the state of the CPU, GPU, Neural Engine, Media Engine, and memory
+- Local AI runtimes such as Ollama, LM Studio, MLX, and llama.cpp, detected from their processes
+- An optional, local-only connection to the runtime's API on 127.0.0.1 for the loaded model, GPU/CPU offload, and tokens per second
+- CPU clusters, GPU, Neural Engine, Media Engine, unified-memory bandwidth, power, and sensors, with one-minute trends
+- A filterable process list with a per-process inspector
 
 ## Process monitor
 

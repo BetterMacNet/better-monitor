@@ -2,7 +2,7 @@
 
 English · [简体中文](usage.md) · [日本語](usage.ja.md) · [한국어](usage.ko.md)
 
-Better Monitor puts processes, network activity, ports, login items, and hardware status in one window, for a quick daily check or a focused investigation. This guide covers version 1.0.2 and walks through the interface page by page.
+Better Monitor puts processes, network activity, ports, login items, and hardware status in one window, for a quick daily check or a focused investigation. This guide covers version 1.0.3 and walks through the interface page by page.
 
 > The screenshots in this guide were generated with demo data. Device names, paths, IP addresses, and processes are fictional and do not belong to any real Mac.
 
@@ -14,17 +14,18 @@ Better Monitor puts processes, network activity, ports, login items, and hardwar
 2. [Permissions](#permissions)
 3. [Layout and keyboard shortcuts](#layout-and-keyboard-shortcuts)
 4. [Monitoring Overview](#monitoring-overview)
-5. [Process Monitor](#process-monitor)
-6. [Network](#network)
-7. [Ports & Services](#ports--services)
-8. [Login Items](#login-items)
-9. [AI Process Summary and AI History](#ai-process-summary-and-ai-history)
-10. [Menu bar](#menu-bar)
-11. [Settings](#settings)
-12. [Shortcuts](#shortcuts)
-13. [Privacy and local data](#privacy-and-local-data)
-14. [Troubleshooting](#troubleshooting)
-15. [Uninstall](#uninstall)
+5. [AI Monitor](#ai-monitor)
+6. [Process Monitor](#process-monitor)
+7. [Network](#network)
+8. [Ports & Services](#ports--services)
+9. [Login Items](#login-items)
+10. [AI Process Summary and AI History](#ai-process-summary-and-ai-history)
+11. [Menu bar](#menu-bar)
+12. [Settings](#settings)
+13. [Shortcuts](#shortcuts)
+14. [Privacy and local data](#privacy-and-local-data)
+15. [Troubleshooting](#troubleshooting)
+16. [Uninstall](#uninstall)
 
 ## Install and first launch
 
@@ -36,7 +37,7 @@ Install with Homebrew:
 brew install --cask bettermacnet/tap/better-monitor
 ```
 
-Or download `BetterMonitor-1.0.2.dmg` from [GitHub Releases](https://github.com/BetterMacNet/better-monitor/releases/latest) and drag `Better Monitor.app` into the Applications folder. Every release is signed with a Developer ID certificate and notarized by Apple, so the first launch does not need a network check.
+Or download `BetterMonitor-1.0.3.dmg` from [GitHub Releases](https://github.com/BetterMacNet/better-monitor/releases/latest) and drag `Better Monitor.app` into the Applications folder. Every release is signed with a Developer ID certificate and notarized by Apple, so the first launch does not need a network check.
 
 On first launch, Better Monitor shows **Terms & Privacy**: local-first monitoring, network lookups only when you trigger them, and the fact that macOS may refuse some actions. Choose **Agree and Continue** to open the main window, or **Decline and Quit** to exit without recording anything.
 
@@ -59,7 +60,7 @@ macOS also does not expose every process and connection detail to regular apps. 
 
 ## Layout and keyboard shortcuts
 
-- **Sidebar**: seven pages — Monitoring Overview, Process Monitor, Network, Ports & Services, Login Items, AI History, and Settings. The card at the bottom shows the Mac model, macOS version, and uptime.
+- **Sidebar**: eight pages — Monitoring Overview, AI Monitor, Process Monitor, Network, Ports & Services, Login Items, AI History, and Settings. The card at the bottom shows the Mac model, macOS version, and uptime.
 - **Top bar**: a search field for the current page on the left; the sampling status (for example "Sampling · 5s"), Refresh Now, and Settings on the right.
 - **Bottom bar** (Overview page): change the sampling interval and history retention directly.
 
@@ -83,6 +84,21 @@ The Overview answers one question: how is this Mac doing right now?
 The Overview in the light appearance:
 
 ![Monitoring Overview in the light appearance](../screenshots/en/13-overview-light.webp)
+
+## AI Monitor
+
+AI Monitor shows what Apple silicon is doing in detail, and where a local AI model is running. It sits right below Monitoring Overview in the sidebar and needs a Mac with Apple silicon.
+
+![AI Monitor](../screenshots/en/14-ai-monitor.webp)
+
+- **AI Workload**: a one-line verdict of what the work is — an LLM on the GPU (Metal), Core ML on the Neural Engine, video on the Media Engine, or idle — with the state of the CPU, GPU, Neural Engine, Media Engine, and memory, each shown with the reading behind it.
+- **AI Runtime**: detects local runtimes such as Ollama, LM Studio, MLX, and llama.cpp from their processes, with their memory and CPU use, and the model budget — the largest model that still fits in memory.
+- **Runtime Processes** and **Local AI runtime API**: every detected runtime process. Turn on **Connect to local AI runtimes** to read the loaded model, its GPU/CPU offload, and tokens per second from the runtime's API on 127.0.0.1; nothing leaves your Mac. Better Monitor never starts a runtime and never scans ports.
+- **CPU** and **GPU / Media / Neural Engine**: usage and clock of the efficiency and performance cores, GPU usage, power, and memory, Neural Engine power, and Media Engine bandwidth, each with a one-minute trend. A card's border turns red while the chip is thermally throttled.
+- **Memory & Bandwidth** and **Network & Disk**: memory composition and pressure, unified-memory bandwidth, and network and disk rates.
+- **Sensors** and **Process List**: fan speeds and temperature sensors by group. The process list can be filtered and sorted; click a process to open its inspector with CPU, IPC, energy, memory, and Neural Engine memory. Quit and Force Quit use the same safety checks as Process Monitor.
+
+AI Monitor samples only while the page is on screen, and stops when you pause monitoring. Some chips expose only a total for memory bandwidth; the CPU / GPU / Media split then reads 0.
 
 ## Process Monitor
 
