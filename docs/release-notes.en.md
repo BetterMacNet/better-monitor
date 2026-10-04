@@ -1,5 +1,11 @@
 # Release Notes
 
+## 1.0.5 — 2026-10-04
+
+### New
+
+- **Audio**: a new page, right below Ports & Services in the sidebar. It shows the device behind the default input, the default output, and alert sounds; each device's transport, sample rate, channel counts, and current data source; and the processes using audio with the device each one uses. The data comes from CoreAudio, needs no permission, and never includes audio content. The system only reports that a process is using a device, not whether it is producing sound, so the page shows neither "playing" nor the menu bar volume.
+
 ## 1.0.3 — 2026-09-24
 
 ### New

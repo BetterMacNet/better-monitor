@@ -2,7 +2,7 @@
 
 English · [简体中文](usage.md) · [日本語](usage.ja.md) · [한국어](usage.ko.md)
 
-Better Monitor puts processes, network activity, ports, login items, and hardware status in one window, for a quick daily check or a focused investigation. This guide covers version 1.0.3 and walks through the interface page by page.
+Better Monitor puts processes, network activity, ports, login items, and hardware status in one window, for a quick daily check or a focused investigation. This guide covers version 1.0.5 and walks through the interface page by page.
 
 > The screenshots in this guide were generated with demo data. Device names, paths, IP addresses, and processes are fictional and do not belong to any real Mac.
 
@@ -18,14 +18,15 @@ Better Monitor puts processes, network activity, ports, login items, and hardwar
 6. [Process Monitor](#process-monitor)
 7. [Network](#network)
 8. [Ports & Services](#ports--services)
-9. [Login Items](#login-items)
-10. [AI Process Summary and AI History](#ai-process-summary-and-ai-history)
-11. [Menu bar](#menu-bar)
-12. [Settings](#settings)
-13. [Shortcuts](#shortcuts)
-14. [Privacy and local data](#privacy-and-local-data)
-15. [Troubleshooting](#troubleshooting)
-16. [Uninstall](#uninstall)
+9. [Audio](#audio)
+10. [Login Items](#login-items)
+11. [AI Process Summary and AI History](#ai-process-summary-and-ai-history)
+12. [Menu bar](#menu-bar)
+13. [Settings](#settings)
+14. [Shortcuts](#shortcuts)
+15. [Privacy and local data](#privacy-and-local-data)
+16. [Troubleshooting](#troubleshooting)
+17. [Uninstall](#uninstall)
 
 ## Install and first launch
 
@@ -37,7 +38,7 @@ Install with Homebrew:
 brew install --cask bettermacnet/tap/better-monitor
 ```
 
-Or download `BetterMonitor-1.0.3.dmg` from [GitHub Releases](https://github.com/BetterMacNet/better-monitor/releases/latest) and drag `Better Monitor.app` into the Applications folder. Every release is signed with a Developer ID certificate and notarized by Apple, so the first launch does not need a network check.
+Or download `BetterMonitor-1.0.5.dmg` from [GitHub Releases](https://github.com/BetterMacNet/better-monitor/releases/latest) and drag `Better Monitor.app` into the Applications folder. Every release is signed with a Developer ID certificate and notarized by Apple, so the first launch does not need a network check.
 
 On first launch, Better Monitor shows **Terms & Privacy**: local-first monitoring, network lookups only when you trigger them, and the fact that macOS may refuse some actions. Choose **Agree and Continue** to open the main window, or **Decline and Quit** to exit without recording anything.
 
@@ -60,7 +61,7 @@ macOS also does not expose every process and connection detail to regular apps. 
 
 ## Layout and keyboard shortcuts
 
-- **Sidebar**: eight pages — Monitoring Overview, AI Monitor, Process Monitor, Network, Ports & Services, Login Items, AI History, and Settings. The card at the bottom shows the Mac model, macOS version, and uptime.
+- **Sidebar**: nine pages — Monitoring Overview, AI Monitor, Process Monitor, Network, Ports & Services, Audio, Login Items, AI History, and Settings. The card at the bottom shows the Mac model, macOS version, and uptime.
 - **Top bar**: a search field for the current page on the left; the sampling status (for example "Sampling · 5s"), Refresh Now, and Settings on the right.
 - **Bottom bar** (Overview page): change the sampling interval and history retention directly.
 
@@ -169,6 +170,20 @@ This page answers: which ports is this Mac listening on, who owns them, and are 
 - **Conflict and anomaly detection** checks for duplicate listeners, non-local bindings, and the signatures of listening processes.
 
 What the binding address means: `127.0.0.1` or `::1` is reachable only from this Mac; `*`, `0.0.0.0`, or `::` listens on every network interface. **A non-local binding is a signal to check, not proof that the port is reachable from outside.** Firewalls, routers, and network isolation all affect reachability. Better Monitor does not scan ports and is not a security audit tool. Services built into macOS, such as the AirPlay Receiver on ports 5000 and 7000, listen on all interfaces by design and usually need no action.
+
+## Audio
+
+![Audio](../screenshots/en/15-audio.webp)
+
+This page answers where sound comes in, where it goes out, and which process is using it right now. The data comes from CoreAudio, needs no permission, and never includes audio content.
+
+- Three cards at the top: the device behind the default input, the default output, and alert sounds. When alert sounds use a different device from the default output, the card says so.
+- The device list: each device's transport (built-in, Bluetooth, USB, AirPlay, Continuity, and others), sample rate, input and output channel counts, current data source, and whether it is in use.
+- Processes using audio: name, PID, bundle ID, and the device each one is sending output to or taking input from.
+
+Processes that have only registered for audio and are idle right now — browsers and input methods often sit there permanently — stay collapsed, out of the main list.
+
+The system reports that a process is *using* a device, not whether it is actually producing sound or sitting muted, so the page never says "playing". The menu bar volume is not shown either: macOS does not give ordinary apps a reading that matches it.
 
 ## Login Items
 

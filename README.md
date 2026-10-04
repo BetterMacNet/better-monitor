@@ -6,7 +6,7 @@ English · [简体中文](README.zh-CN.md) · [日本語](README.ja.md) · [한�
 
 A native macOS system monitor for understanding what your Mac is doing right now.
 
-Better Monitor brings process, network, port, startup-item, and hardware information into one app for everyday observation and focused troubleshooting.
+Better Monitor brings process, network, port, audio, startup-item, and hardware information into one app for everyday observation and focused troubleshooting.
 
 ![Better Monitor Monitoring Overview: health score, CPU, memory, network, disk, process, and thermal status, with suggestions](screenshots/en/01-overview.webp)
 
@@ -16,6 +16,7 @@ Better Monitor brings process, network, port, startup-item, and hardware informa
 - Find an app or process using unusually high CPU or memory.
 - Inspect active network connections, traffic, protocols, and destinations.
 - Review listening ports, their owning processes, and risk signals.
+- See the current audio input and output devices, and the processes using them.
 - Review background startup items and their current resource impact.
 - See whether a local model in Ollama, LM Studio, or MLX runs on the GPU or the Neural Engine, with memory bandwidth and tokens per second.
 
@@ -28,7 +29,7 @@ Better Monitor brings process, network, port, startup-item, and hardware informa
    ```
 
 2. Launch Better Monitor and choose a page from the navigation sidebar.
-3. Open **Monitoring Overview** for a quick status check, **AI Monitor** to watch Apple silicon hardware and local AI runtimes, or use Process Monitor, Network, Ports & Services, and Login Items to investigate a specific issue.
+3. Open **Monitoring Overview** for a quick status check, **AI Monitor** to watch Apple silicon hardware and local AI runtimes, or use Process Monitor, Network, Ports & Services, Audio, and Login Items to investigate a specific issue.
 4. Grant Location Services only if you want the current Wi-Fi name. macOS may still limit process and port details depending on permissions and system visibility.
 
 You can also download the [latest release](https://github.com/BetterMacNet/better-monitor/releases/latest) and move `Better Monitor.app` to the Applications folder. Releases are signed with a Developer ID certificate and notarized by Apple; the notarization ticket is stapled to the disk image.
@@ -40,6 +41,7 @@ You can also download the [latest release](https://github.com/BetterMacNet/bette
 - **Process monitor** — Inspect resource usage, identity, paths, network activity, and open files, with actions for processes you control.
 - **Network activity** — Review interfaces, connections, traffic, protocols, TCP states, and destinations.
 - **Ports and services** — Find listening ports, identify their owning processes, and surface useful risk signals.
+- **Audio** — See the devices behind the default input, default output, and alert sounds, and the processes using them.
 - **Login Items** — Review readable LaunchAgents and LaunchDaemons, current resource impact, and modern login items through System Settings.
 - **Optional AI assistance** — Configure your own provider and request an AI-assisted process diagnostic when you need it.
 - **Native macOS experience** — Built with SwiftUI for macOS 15 or later.

@@ -1,6 +1,6 @@
 # Better Monitor Features
 
-Better Monitor 1.0.3 is a native macOS system monitor for everyday observation and focused troubleshooting. It brings the information you need into one window instead of sending you between multiple system tools.
+Better Monitor 1.0.5 is a native macOS system monitor for everyday observation and focused troubleshooting. It brings the information you need into one window instead of sending you between multiple system tools.
 
 ## Monitoring overview
 
@@ -54,6 +54,16 @@ Use the ports page to understand what is listening on the Mac:
 - Port changes and risk filters
 
 A non-local bind is a signal to investigate, not proof that a service is externally reachable or has been security-audited.
+
+## Audio
+
+The audio page shows where sound comes in, where it goes out, and who is using it:
+
+- The device behind the default input, the default output, and alert sounds
+- Each device's transport, sample rate, channel counts, and current data source
+- The processes using audio, and which device each one outputs to or takes input from
+
+The data comes from CoreAudio, needs no permission, and never includes audio content. The system only reports that a process is using a device, not whether it is producing sound, so the page shows neither "playing" nor the menu bar volume.
 
 ## Startup items
 
